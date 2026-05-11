@@ -1,5 +1,25 @@
 # ox_inventory
 
+> ## ⚠️ QBCore-optimized fork
+>
+> This is a **community fork** of [overextended/ox_inventory](https://github.com/overextended/ox_inventory) maintained by [@JensGryspeert](https://github.com/JensGryspeert).
+>
+> **What's different**
+> - Restores the `qb-core` bridge that upstream removed in v2.41.0 (see PR [#1935](https://github.com/overextended/ox_inventory/pull/1935)).
+> - Targets **stock `qb-core`** servers — not `qbx_core`. If you're on `qbx_core`, keep using upstream.
+> - Includes additional bug fixes on top of upstream (e.g. `SetSlot` empty-slot regression).
+>
+> **Maintenance**
+> - Rebased regularly against `overextended/ox_inventory:main` to stay current with upstream changes.
+> - Releases tagged here may lead or lag upstream; treat versions as fork-specific even when numbered the same.
+>
+> **Warning**
+> - **Use at your own risk.** Not endorsed by Overextended. Do not open issues against upstream for behaviour specific to this fork — file them [here](https://github.com/JensGryspeert/ox_inventory/issues) instead.
+> - Back up your database before switching frameworks or running `convertinventory`.
+> - APIs and bridge internals can drift from upstream between rebases; pin to a known release rather than tracking `main` on production.
+
+---
+
 A complete inventory system for FiveM, implementing items, weapons, shops, and more without any strict framework dependency.
 
 ![](https://img.shields.io/github/downloads/overextended/ox_inventory/total?logo=github)
@@ -23,6 +43,7 @@ We do not guarantee compatibility or support for third-party resources.
 - [esx](https://github.com/esx-framework/esx_core)
 - [qbox](https://github.com/Qbox-project/qbx_core)
 - [nd_core](https://github.com/ND-Framework/ND_Core)
+- [qb-core](https://github.com/qbcore-framework/qb-core) — restored by this fork
 
 ## ✨ Features
 
